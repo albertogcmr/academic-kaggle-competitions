@@ -7,7 +7,7 @@ Este repositorio tiene como fin la documentación y fácil replicación de difer
 ## Entregables
 
 Deberá hacerse una pull request a este repositorio con los siguientes requisitos mínimos: 
-* Entrenar un mínimo de 3 modelos diferentes
+* Entrenar un mínimo de 4 modelos diferentes: 2 vistos en clase y 2 que no
 * Realizar un mínimo de 4 técnicas de Feature Extraction and Engineering
 * Documentación necesaria para poder reproducir el código
 * El código en ficheros `.py` que permita reproducir el ejercicio
