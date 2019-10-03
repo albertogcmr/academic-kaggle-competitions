@@ -103,4 +103,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-script/output/
+script/output/*      # ignore everything in the directory
