@@ -10,7 +10,8 @@ Deberá hacerse una pull request a este repositorio con los siguientes requisito
 * Entrenar un mínimo de 4 modelos diferentes: 2 vistos en clase y 2 que no
 * Realizar un mínimo de 4 técnicas de Feature Extraction and Engineering
 * Documentación necesaria para poder reproducir el código
-* El código en ficheros `.py` que permita reproducir el ejercicio
+* El código en ficheros `.py` que permita reproducir el ejercicio.
+* El Readme debe contener un resumen de las herramientas y algoritmos de machine learning empleados y los resultados o el score obtenido con cada uno de ellos.
 
 ### Feature Extraction and Engineering
 
