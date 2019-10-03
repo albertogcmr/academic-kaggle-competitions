@@ -27,12 +27,12 @@ def main() :
     args = get_args ()
     name, target, size = args.name, args.target, args.size
     print ("loading the dataset...")
-    data = loadData ('./{}'.format (name))
+    data = loadData ('./input/{}'.format (name))
     print ("cleaning the dataset...")
     data_clean = cleaningData (data, size)
     print ("splitting into train and test the dataset...")
     x_train, test_students, test_solution, sample_submission = splitData (data_clean, target)
-    saveData (os.getcwd (), x_train, test_students, test_solution, sample_submission)
+    saveData ("./output", x_train, test_students, test_solution, sample_submission)
 
 
 if __name__ == '__main__' :

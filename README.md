@@ -18,9 +18,9 @@ Posibles técnicas, además de estudiar el problema y sacar tus conclusiones:
 
 * One hot encoding
 * Label encoding
-* dummies
+* Get dummies
 * PCA
-* consumo de API externa y/o web scraping
+* Consumo de API externa y/o web scraping
 
 ### Regresión
 
@@ -41,3 +41,31 @@ Posibles modelos de clasificación:
 * AdaBoostClassifier
 * KNeighborsClassifier
 * SVM
+
+## Ejecución de script
+
+En la carpeta source se encuentran los siguientes archivos:
+
+* Input (dataset completo)
+* Ouput (dataset procesado para hacer competición)
+* main.py
+* functions.py
+
+El procedimiento es ejecutar el siguiente código, con el nombre del dataset que se encuentra en la carpeta Input y la columna target que se debe predecir.
+
+```
+python main.py -n "diamonds.csv -t "price"
+```
+
+Si el dataset es muy grande, se puede reducir el número de registros. El parámetro es opcional.
+
+```
+python main.py -n "cars.csv -t "price" -s 17000
+```
+
+En la carpeta Output aparecerán 4 archivos:
+
+* Sample submission
+* Train para los alumnos
+* Test para los alumnos
+* Test solution
