@@ -44,14 +44,15 @@ Posibles modelos de clasificación:
 
 ## Ejecución de script
 
-En la carpeta source se encuentran los siguientes archivos:
+En la carpeta **script** se encuentran los siguientes archivos:
 
-* Input (dataset completo)
-* Ouput (dataset procesado para hacer competición)
-* main.py
-* functions.py
+* input (dataset completo)
+* output (dataset procesado para hacer competición)
+* source
+    * main.py
+    * functions.py
 
-El procedimiento es ejecutar el siguiente código, con el nombre del dataset que se encuentra en la carpeta Input y la columna target que se debe predecir.
+El procedimiento es ejecutar el siguiente código, con el nombre del dataset que se encuentra en la carpeta input y la columna target que se debe predecir.
 
 ```
 python main.py -n "diamonds.csv -t "price"
@@ -63,7 +64,7 @@ Si el dataset es muy grande, se puede reducir el número de registros. El parám
 python main.py -n "cars.csv -t "price" -s 17000
 ```
 
-En la carpeta Output aparecerán 4 archivos:
+En la carpeta output aparecerán 4 archivos:
 
 * Sample submission
 * Train para los alumnos
