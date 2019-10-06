@@ -91,11 +91,16 @@ def clean_data(data_frame):
     print('Data cleaning complete!')
     return data_frame
 
-def prepare_data(data_frame):
+def prepare_data(data_frame,columns,typ='test'):
     # Select only relevant columns
-    data_frame = data_frame[['year','manufacturer','condition','cylinders','fuel','odometer','title_status','transmission','drive','size']]
+    columns = columns
+    if typ == 'train':
+        y = data_frame['price']
+        data_frame = data_frame.drop(columns='price')
+    else:
+        y = None
+    data_frame = data_frame[columns]
     # Getting dummies for categorical columns
     data_frame = pd.get_dummies(data_frame,drop_first=True)
-    # Get X and y
-    X = data_frame
-    return X
+
+    return data_frame,y
