@@ -1,5 +1,4 @@
 import warnings
-warnings.filterwarnings('ignore')
 import pandas as pd
 import numpy as np
 import argparse
@@ -11,9 +10,10 @@ from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import normalize
 
 def main():
+    warnings.filterwarnings('ignore')
     # Read Files
-    train = pd.read_csv('../../cars-competition/data/{}'.format(train_dir), index_col='Id')
-    submission = pd.read_csv('../../cars-competition/data/{}'.format(submission_dir), index_col='Id')
+    train = pd.read_csv('../cars-competition/data/{}'.format(train_dir), index_col='Id')
+    submission = pd.read_csv('../cars-competition/data/{}'.format(submission_dir), index_col='Id')
     # Clean Data
     print('Starting train data cleaning:')
     train = clean_data(train,columns)
@@ -121,8 +121,8 @@ def main():
     for i, df in X_sub_dec.items():
         df['price'] = abs(y_sub[i])
     y_sub = pd.concat(list(X_sub_dec.values()),axis=0)['price']
-    y_sub.to_csv('../output/submission.csv', header=True, index=True)
-    print('Submission file saved to /output/submission.csv')
+    y_sub.to_csv('../cars-competition/data/submission.csv', header=True, index=True)
+    print('Submission file saved to cars-competition/data/submission.csv')
     print('End of program')
     
 if __name__ == '__main__':
